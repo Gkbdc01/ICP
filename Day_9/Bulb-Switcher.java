@@ -8,7 +8,7 @@ class Solution {
         while(lo<=hi){
             int mid = lo + (hi-lo)/2;
         }
-            if(mid*mid<=n){
+            if(mid <=n/mid){
                 max = mid;
             }else{
         int max = 0;

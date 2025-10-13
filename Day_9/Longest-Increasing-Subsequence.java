@@ -1,16 +1,18 @@
-        return LIS(nums,0,Integer.MIN_VALUE);
+        return LIS(nums);
     }
-    public static int LIS(int[] arr,int i ,int lst) {
-        if(i == arr.length){
-            return 0;
+    public static int LIS(int[] arr) {
+        int[] dp = new int[arr.length];
+        Arrays.fill(dp, 1);
+        for(int i = 0;i<arr.length;i++) {
+                if(arr[i]>arr[j]) {
+                    dp[i] = Math.max(dp[i], x+1);
         }
-        if(lst<arr[i]){
-        }
-    }
-            pick =  1+LIS(arr,i+1,arr[i]);
-        int ntpick = LIS(arr,i+1,lst);
-        return Math.max(pick,ntpick);
-        int pick = 0;
-}
+                    int x = dp[j];
     public int lengthOfLIS(int[] nums) {
 class Solution {
+                }
+            }
+            for(int j = i -1 ; j>=0;j--) {
+        return Arrays.stream(dp).max().getAsInt();
+    }
+}
